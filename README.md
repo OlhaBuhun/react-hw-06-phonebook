@@ -110,3 +110,23 @@ GitHub.
 3. Якщо всі кроки пройшли успішно, зібрана продакшн-версія файлів проєкту
    відправляється в гілку `gh-pages`. В іншому випадку, в лозі виконання
    скрипта буде вказано в чому проблема.
+
+  
+   Установка програм
+   1. npm install eslint --save-dev
+      npx eslint --init
+      в файл eslintrc.json
+      "rules": {
+         "react/react-in-jsx-scope": "off"
+      }
+      npm install eslint-config-prettier eslint-plugin-prettier prettier --save-dev
+      в файл eslintrc.json
+      "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+      ],
+   2. npm install @reduxjs/toolkit react-redux
+   3. https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
+   4. npm install styled-components
+   5. npm i modern-normalize   
