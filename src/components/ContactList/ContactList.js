@@ -1,18 +1,16 @@
+import { useSelector } from 'react-redux';
 import { ContactListStyled } from './ContactList.styled';
-import Contact from 'components/Contact/Conctact';
+import { getContacts } from 'components/redux/selectors';
+import { Contact } from 'components/Contact/Contact';
 
-const contacts = [];
-
-export const ContactList = () => (
-  <ContactListStyled>
-    {contacts.map(({ id, name, number }) => (
-      <Contact
-        key={id}
-        id={id}
-        name={name}
-        number={number}
-        // onDeleteContact={() => onDeleteContact(id)}
-      />
-    ))}
-  </ContactListStyled>
-);
+export const ContactList = () => {
+  const contacts = useSelector(getContacts);
+  // console.log(contacts);
+  return (
+    <ContactListStyled>
+      {contacts.map(contact => (
+        <Contact key={contact.id} contact={contact} />
+      ))}
+    </ContactListStyled>
+  );
+};
