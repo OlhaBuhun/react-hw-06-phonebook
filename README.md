@@ -129,4 +129,5 @@ GitHub.
    2. npm install @reduxjs/toolkit react-redux
    3. https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
    4. npm install styled-components
-   5. npm i modern-normalize   
+   5. npm i modern-normalize 
+   6. npm i redux-persist  
