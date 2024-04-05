@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Form, FormButton, FormInput, FormLabel } from './ContactForm.styled';
-import { addContacts } from 'components/Contact/redux/contactsSlice';
+import { addContacts } from 'components/redux/contactsSlice';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -20,23 +20,11 @@ export const ContactForm = () => {
     <Form onSubmit={handleSubmit}>
       <FormLabel htmlFor="name">
         Name
-        <FormInput
-          type="text"
-          name="name"
-          // onChange={handleChahge}
-          // value={name}
-          required
-        />
+        <FormInput type="text" name="name" required />
       </FormLabel>
       <FormLabel htmlFor="name">
         Number
-        <FormInput
-          type="tel"
-          name="number"
-          // onChange={handleChahge}
-          // value={number}
-          required
-        />
+        <FormInput type="tel" name="number" required />
       </FormLabel>
       <FormButton type="submit">Add contact</FormButton>
     </Form>
